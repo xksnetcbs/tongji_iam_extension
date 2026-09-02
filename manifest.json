@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Tongji IAM Auto Login",
+  "version": "1.0.1",
+  "description": "Auto-fill Tongji unified authentication form on iam.tongji.edu.cn.",
+  "content_scripts": [{
+    "matches": ["https://iam.tongji.edu.cn/*", "https://mail.tongji.edu.cn/*"],
+    "js": ["config.js", "content.js"],
+    "run_at": "document_idle"
+  }],
+  "permissions": ["storage"]
+}
